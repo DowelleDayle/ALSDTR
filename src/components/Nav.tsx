@@ -3,15 +3,17 @@ import ALS from "../assets/ALS-logo.png";
 
 type Props = {
   handleLogoutClick: () => void;
+  pageNumber: number;
+  handlePageClick: () => void;
 };
 
-const Nav = ({ handleLogoutClick }: Props) => {
+const Nav = ({ handleLogoutClick, pageNumber, handlePageClick }: Props) => {
   return (
     <div className={styles.Nav}>
       <div className={styles.Nav_inner}>
         <img className={styles.Logo} src={ALS} alt="als logo" />
         <ul>
-          <li>
+          <li onClick={() => handlePageClick(1)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -32,7 +34,7 @@ const Nav = ({ handleLogoutClick }: Props) => {
             </svg>{" "}
             <span>Dashboard</span>
           </li>
-          <li>
+          <li onClick={() => handlePageClick(2)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -52,7 +54,7 @@ const Nav = ({ handleLogoutClick }: Props) => {
             <span>Login History</span>
           </li>
 
-          <li>
+          <li onClick={() => handlePageClick(3)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -73,7 +75,7 @@ const Nav = ({ handleLogoutClick }: Props) => {
             <span>Employee Profile</span>
           </li>
 
-          <li>
+          <li onClick={() => handlePageClick(4)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

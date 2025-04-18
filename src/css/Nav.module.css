@@ -74,3 +74,14 @@ li:hover {
   font-size: 0.85em;
   color: #333;
 }
+
+@media (max-width: 431px) {
+  .Nav {
+    position: fixed;
+    width: 75%;
+    background-color: green;
+  }
+  .Logo {
+    width: 35%;
+  }
+}

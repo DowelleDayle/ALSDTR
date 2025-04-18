@@ -1,15 +1,48 @@
 import styles from "../css/Home.module.css";
 import Nav from "../components/Nav";
+import Dashboard from "../components/Dashboard";
+import History from "../components/History";
+import Profile from "../components/Profile";
+import About from "../components/About";
 
 type Props = {
   handleLogoutClick: () => void;
-  isLogout: () => void;
+  isLogout: boolean;
+  pageNumber: number;
+  handlePageClick: (value: number) => void;
 };
 
-const Home = ({ handleLogoutClick, isLogout }: Props) => {
+const Home = ({
+  handleLogoutClick,
+  isLogout,
+  pageNumber,
+  handlePageClick,
+}: Props) => {
+  const renderPage = () => {
+    switch (pageNumber) {
+      case 1:
+        return <Dashboard />;
+      case 2:
+        return <History />;
+      case 3:
+        return <Profile />;
+      case 4:
+        return <About />;
+      default:
+        return <Dashboard />;
+    }
+  };
+
   return (
     <div className={styles.Home}>
-      <Nav handleLogoutClick={handleLogoutClick} />
+      <Nav
+        handleLogoutClick={handleLogoutClick}
+        handlePageClick={handlePageClick}
+        pageNumber={pageNumber}
+      />
+
+      {renderPage()}
+
       {isLogout && (
         <div className={styles.Logout_main}>
           <div className={styles.Logout}>

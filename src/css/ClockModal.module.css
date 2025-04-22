@@ -1,0 +1,85 @@
+.ClockModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #33333350;
+  z-index: 3;
+}
+.Head {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.Head img {
+  width: 1rem;
+}
+.Head_inner {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.Head_inner span {
+  color: #838080;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.ClockModal_inner {
+  width: 25vw;
+  background-color: #fff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ClockModal_inner button {
+  text-align: center;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.Location {
+  padding: 0.75rem 0;
+  width: 100%;
+  font-weight: bold;
+  border: solid 1px #f7665f !important;
+  background-color: #fff;
+  color: #f7665f;
+}
+.Button {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.Button_inner {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+.Button_inner button {
+  width: 50%;
+  padding: 0.75rem;
+}
+.Button_inner button:first-child {
+  background-color: #03396c;
+  color: #fff;
+}
+.Button_inner button:nth-child(2) {
+  color: #03396c;
+  border: solid 1px #03396c;
+}

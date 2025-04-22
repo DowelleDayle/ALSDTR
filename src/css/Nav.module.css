@@ -27,6 +27,7 @@ ul {
   justify-content: flex-start;
 }
 li {
+  white-space: nowrap;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -80,6 +81,7 @@ li:hover {
     position: fixed;
     width: 75%;
     background-color: green;
+    display: none;
   }
   .Logo {
     width: 35%;

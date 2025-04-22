@@ -4,6 +4,7 @@ import Dashboard from "../components/Dashboard";
 import History from "../components/History";
 import Profile from "../components/Profile";
 import About from "../components/About";
+import ClockModal from "../components/ClockModal";
 
 type Props = {
   handleLogoutClick: () => void;
@@ -40,6 +41,7 @@ const Home = ({
         handlePageClick={handlePageClick}
         pageNumber={pageNumber}
       />
+      <ClockModal />
 
       {renderPage()}
 

@@ -216,6 +216,44 @@
   font-weight: bold;
   color: #333;
 }
+.Weekly {
+  padding: 1rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: #fff;
+}
+.Filter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: solid 1px #33333325;
+  padding: 0.75rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+}
+.Filter span {
+  color: #5d6679;
+}
+.Filter img {
+  width: 1.5rem;
+}
+.Weekly_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ReportText {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #5d6679;
+}
 @media (max-width: 431px) {
   .Dashboard {
     width: 100%;
@@ -242,5 +280,30 @@
   }
   .Time_widget {
     font-size: 1.25em;
+  }
+  .ReportText {
+    font-size: 0.75em;
+    font-weight: regular;
+  }
+  .Filter {
+    padding: 0.5rem;
+  }
+  .Filter img {
+    width: 1.25rem;
+  }
+  .Filter span {
+    font-size: 0.75em;
+  }
+  .Name,
+  .Time {
+    font-size: 0.85em;
+  }
+  .Date {
+    padding: 0.75rem;
+  }
+  .Widget_right,
+  .Widget_left {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

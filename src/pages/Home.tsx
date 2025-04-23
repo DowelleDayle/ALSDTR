@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import styles from "../css/Home.module.css";
 import Nav from "../components/Nav";
 import Dashboard from "../components/Dashboard";
@@ -22,7 +24,12 @@ const Home = ({
   const renderPage = () => {
     switch (pageNumber) {
       case 1:
-        return <Dashboard />;
+        return (
+          <Dashboard
+            handleCameraClick={handleCameraClick}
+            showCamera={showCamera}
+          />
+        );
       case 2:
         return <History />;
       case 3:
@@ -30,8 +37,13 @@ const Home = ({
       case 4:
         return <About />;
       default:
-        return <Dashboard />;
+        return <History />;
     }
+  };
+
+  const [showCamera, setShowCamera] = useState(false);
+  const handleCameraClick = () => {
+    setShowCamera(!showCamera);
   };
 
   return (
@@ -41,7 +53,10 @@ const Home = ({
         handlePageClick={handlePageClick}
         pageNumber={pageNumber}
       />
-      <ClockModal />
+      <ClockModal
+        handleCameraClick={handleCameraClick}
+        showCamera={showCamera}
+      />
 
       {renderPage()}
 

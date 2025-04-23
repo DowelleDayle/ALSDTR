@@ -102,4 +102,7 @@
   .Logout {
     width: 85%;
   }
+  .Home {
+    padding-bottom: 3rem;
+  }
 }

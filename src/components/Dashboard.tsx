@@ -4,8 +4,13 @@ import Pause from "../assets/pause.png";
 import Resume from "../assets/resume.png";
 import Camera from "../assets/camera.png";
 import Eye from "../assets/eye.png";
+import Filter from "../assets/sort.png";
 
-const Dashboard = () => {
+type Props = {
+  handleCameraClick: () => void;
+  showCamera: () => void;
+};
+const Dashboard = ({ handleCameraClick, shwoCamera }: Props) => {
   const [isResume, setIsResume] = useState(false);
   const handleResume = () => {
     setIsResume(!isResume);
@@ -73,7 +78,12 @@ const Dashboard = () => {
               </div>
               <span className={styles.Time_widget}>8:00 AM</span>
             </div>
-            <img className={styles.Camera} src={Camera} alt="Camera icon" />
+            <img
+              onClick={handleCameraClick}
+              className={styles.Camera}
+              src={Camera}
+              alt="Camera icon"
+            />
           </div>
 
           <div className={styles.Clockin2}>
@@ -107,6 +117,16 @@ const Dashboard = () => {
               <span className={styles.Time_widget}>8:00 AM</span>
             </div>
             <img className={styles.Camera} src={Camera} alt="Camera icon" />
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.Weekly}>
+        <div className={styles.Weekly_head}>
+          <span className={styles.ReportText}>Weekly Report</span>
+          <div className={styles.Filter}>
+            <img src={Filter} alt="Filter icon" />
+            <span>Filter by date</span>
           </div>
         </div>
       </div>

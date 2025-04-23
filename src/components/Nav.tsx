@@ -72,7 +72,7 @@ const Nav = ({ handleLogoutClick, pageNumber, handlePageClick }: Props) => {
               <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
               <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
             </svg>
-            <span>Employee Profile</span>
+            <span>Profile</span>
           </li>
 
           <li onClick={() => handlePageClick(4)}>
@@ -117,7 +117,7 @@ const Nav = ({ handleLogoutClick, pageNumber, handlePageClick }: Props) => {
             <path d="M15 12h-12l3 -3" />
             <path d="M6 15l-3 -3" />
           </svg>
-          <span>Log out</span>
+          <span >Log out</span>
         </div>
         <span className={styles.Rights}>All Rights Reserved 2025</span>
       </div>

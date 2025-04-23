@@ -79,11 +79,35 @@ li:hover {
 @media (max-width: 431px) {
   .Nav {
     position: fixed;
-    width: 75%;
-    background-color: green;
-    display: none;
+    width: 100%;
+
+    bottom: 0;
+    height: fit-content;
+    z-index: 99;
+    padding: 0;
+    gap: 1rem;
   }
   .Logo {
-    width: 35%;
+    display: none;
+  }
+  ul {
+    flex-direction: row;
+    width: 100%;
+  }
+  .Rights {
+    display: none;
+  }
+  li {
+    flex-direction: column;
+    padding: 0.25rem;
+  }
+  li img {
+    width: 5rem;
+  }
+  li span {
+    font-size: 0.65em;
+  }
+  .Nav_foot {
+    display: none;
   }
 }
